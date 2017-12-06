@@ -1,3 +1,3 @@
-Recent Blogs
+**Recent Blogs**
 
-#[Discriminant Analysis](DiscriminantAnalysis.md)
+[Discriminant Analysis](DiscriminantAnalysis.md)
