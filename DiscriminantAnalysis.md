@@ -12,14 +12,7 @@ There are two groups in this problem. Group1 owning movers (Owners) and Group2 n
 
 [Linear Discriminant Analysis - Wikipidea link filed with Maths](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
 
-Let us try to understand intutively with a example.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
+Let us try to understand intutively with an sample data set.
 
 |Income	|LotSize	|wnership|
 |:-------:|:-------:|------------|
