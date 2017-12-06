@@ -1,3 +1,3 @@
 **Recent Blogs**
 
-1. [Discriminant Analysis](DiscriminantAnalysis.md)
+1. [Discriminant Analysis](DiscriminantAnalysis)
