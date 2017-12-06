@@ -1,4 +1,4 @@
-# Discriminate Analysis
+# Discriminant Analysis
 
 ## Example: Lawn Mover Ownership
 
@@ -10,7 +10,7 @@ There are two groups in this problem. Group1 owning movers (Owners) and Group2 n
 Y (Dependent Variable) = Ownership
 X (Independent Variables) = Income and Lot Size
 
-Fisher postulated that maximising the distance between owners and non-owners by varying the mean of the independent variables which are affected by two arbitrary variable a1 and a2, while minimising the variance of the overall data affected by the two arbitrary variables leads to the maximum discrimination between the groups.
+Fisher postulated that maximising the distance between the two groups, owners and non-owners by varying the mean of the independent variables which are affected by two arbitrary variable a1 and a2, while minimising the variance of the overall data affected by the two arbitrary variables leads to the maximum discrimination between the groups.
 
 ```
 z1 = a1 * (mean income of owners) + a2 * (mean lotsize of owners)
