@@ -38,6 +38,12 @@ Let us try to understand intutively with an sample data set.
 |...	|...	|...	|...|
 |...	|...	|...	|...|
 
+
+Exploratory analysis of the data:
+
+
+
+
 To Do: 
 - Density plot for group 1 and group 2
 - Density plot for overall for the complete data set
