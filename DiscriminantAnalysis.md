@@ -17,45 +17,38 @@ Let us try to understand intutively with an sample data set.
 |2	|68	|7.1	|No|
 |3	|54.9	|21.5	|No|
 |4	|50.6	|19.3	|No|
-|5	|54.1	|16.7	|No|
-|6	|78.2	|31.9	|No|
-|7	|66.2	|23.8	|No|
-|8	|43.9	|12.4	|No|
-|9	|41.9	|5	|No|
-|10	|61.1	|25.2	|No|
-|11	|64.5	|11.8	|No|
-|...	|...	|...	|...|
 |...	|...	|...	|...|
 |...	|...	|...	|...|
 |58	|77.8	|48.5	|Yes|
 |59	|86.6	|66.6	|Yes|
 |60	|72.9	|39.4	|Yes|
 |61	|90.9	|63.8	|Yes|
-|62	|64.3	|50.1	|Yes|
-|63	|53.9	|36.4	|Yes|
-|64	|74.8	|56	|Yes|
 |...	|...	|...	|...|
-|...	|...	|...	|...|
-|...	|...	|...	|...|
-
 
 # Exploring the data
 
 ## Income vs subscriber
 
+### Comparing the box plot
 ![alt text](https://learningintution.github.io/image/IncomeToSubscriber.jpeg)
 
+### Comparing the mean
 |Subscriber|Income|
 |:-------|-------:|
 |No	|66.04|	
 |Yes	|80.49|
 
+### Comparing the density distribution
+
+
 There is a visible difference in the mean of income between Subscriber vs Non Subscriber groups.
 
 ## Investment Amount vs subscriber
 
+### Comparing the box plot
 ![alt text](https://learningintution.github.io/image/InvestAmtToSubscriber.jpg)
 
+### Comparing the mean
 |Subscriber|Investment Amount|
 |:-------|-------:|
 |No	|24.95|			
