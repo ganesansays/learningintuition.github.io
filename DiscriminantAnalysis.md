@@ -39,14 +39,14 @@ Let us try to understand intutively with an sample data set.
 |Yes	|80.49|
 
 ### Comparing the density distribution
-
+![alt text](https://learningintution.github.io/image/IncomeToSubscriberDensityComp.jpeg)
 
 There is a visible difference in the mean of income between Subscriber vs Non Subscriber groups.
 
 ## Investment Amount vs subscriber
 
 ### Comparing the box plot
-![alt text](https://learningintution.github.io/image/InvestAmtToSubscriber.jpg)
+![alt text](https://learningintution.github.io/image/InvestAmtToSubscriber.jpeg)
 
 ### Comparing the mean
 |Subscriber|Investment Amount|
