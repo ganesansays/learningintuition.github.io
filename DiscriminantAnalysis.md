@@ -33,6 +33,7 @@ Let us try to understand intutively with an sample data set.
 ![alt text](https://learningintution.github.io/image/IncomeToSubscriber.jpeg)
 
 ### Comparing the mean
+
 |Subscriber|Income|
 |:-------|-------:|
 |No	|66.04|	
@@ -49,6 +50,7 @@ There is a visible difference in the mean of income between Subscriber vs Non Su
 ![alt text](https://learningintution.github.io/image/InvestAmtToSubscriber.jpeg)
 
 ### Comparing the mean
+
 |Subscriber|Investment Amount|
 |:-------|-------:|
 |No	|24.95|			
