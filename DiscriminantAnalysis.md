@@ -1,45 +1,42 @@
 # Linear Discriminant Analysis
 
-## Example: Lawn Mover Ownership
+## Example: Wall Street Journal Subscription
 
-Lets say, we like to understand how Income of a person and the lot size of his garden affects the ownership of a Mover. In other words can we discriminate the two groups, owners and non-owners based on the income of the person and lot size.
-There are two groups in this problem. Group1 owning movers (Owners) and Group2 not owning movers (Non-Owners).
+Let us say, we like to understand how income of a person and the amount he has invested affects his subscription choice to Wall Street Journal. In other words can we discriminate the two groups, subscribers and non-subscribrs based on the income of the person and the amount he has invested.  
 
-**Given:**
-
-* Y (Dependent Variable) = Ownership
-* X (Independent Variables) = Income and Lot Size
+* Y (Dependent Variable) = Subscription
+* X (Independent Variables) = Income and Investment Amount
 
 [Linear Discriminant Analysis - Wikipidea link filed with Maths](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
 
 Let us try to understand intutively with an sample data set.
 
-|Income	|LotSize	|wnership|
-|:-------:|:-------:|------------|
-|60	|18.4	|owner
-|85.5	|16.8	|owner|
-|64.8	|21.6	|owner|
-|61.5	|20.8	|owner|
-|87	|23.6	|owner|
-|110.1	|19.2	|owner|
-|108	|17.6	|owner|
-|82.8	|22.4	|owner|
-|69	|20	|owner|
-|93	|20.8	|owner|
-|51	|22	|owner|
-|81	|20	|owner|
-|75	|19.6	|non-owner|
-|52.8	|20.8	|non-owner|
-|64.8	|17.2	|non-owner|
-|43.2	|20.4	|non-owner|
-|84	|17.6	|non-owner|
-|49.2	|17.6	|non-owner|
-|59.4	|16	|non-owner|
-|66	|18.4	|non-owner|
-|47.4	|16.4	|non-owner|
-|33	|18.8	|non-owner|
-|51	|14	|non-owner|
-|63	|14.8	|non-owner|
+|Person	|Income	|InvestAmt	|WSJSubscriber|
+|-------:|-------:|-------:|---------|
+|1	|66.4	|26.9	|No|
+|2	|68	|7.1	|No|
+|3	|54.9	|21.5	|No|
+|4	|50.6	|19.3	|No|
+|5	|54.1	|16.7	|No|
+|6	|78.2	|31.9	|No|
+|7	|66.2	|23.8	|No|
+|8	|43.9	|12.4	|No|
+|9	|41.9	|5	|No|
+|10	|61.1	|25.2	|No|
+|11	|64.5	|11.8	|No|
+|...	|...	|...	|...|
+|...	|...	|...	|...|
+|...	|...	|...	|...|
+|58	|77.8	|48.5	|Yes|
+|59	|86.6	|66.6	|Yes|
+|60	|72.9	|39.4	|Yes|
+|61	|90.9	|63.8	|Yes|
+|62	|64.3	|50.1	|Yes|
+|63	|53.9	|36.4	|Yes|
+|64	|74.8	|56	|Yes|
+|...	|...	|...	|...|
+|...	|...	|...	|...|
+|...	|...	|...	|...|
 
 To Do: 
 - Density plot for group 1 and group 2
