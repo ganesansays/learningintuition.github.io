@@ -41,7 +41,7 @@ Let us try to understand intutively with an sample data set.
 
 Exploratory analysis of the data:
 
-![Box plot Income vs Subscriber](images/IncomeToSubscriber.jpeg "Income vs Subscriber")
+![Box plot Income vs Subscriber](learningintution.github.io/image/IncomeToSubscriber.jpeg "Income vs Subscriber")
 
 
 To Do: 
