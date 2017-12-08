@@ -54,7 +54,7 @@ There is a visible difference in the mean of income between Subscriber vs Non Su
 
 ## Investment Amount vs subscriber
 
-![alt text](https://learningintution.github.io/image/InvestAmtToSubscriber.jpeg)
+![alt text](https://learningintution.github.io/image/InvestAmtToSubscriber.jpg)
 
 |Subscriber|Investment Amount|
 |:-------|-------:|
