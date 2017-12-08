@@ -39,10 +39,29 @@ Let us try to understand intutively with an sample data set.
 |...	|...	|...	|...|
 
 
-Exploratory analysis of the data:
+# Exploring the data
+
+## Income vs subscriber
 
 ![alt text](https://learningintution.github.io/image/IncomeToSubscriber.jpeg)
 
+|Subscriber|Income|
+|:-------|-------:|
+|No	|66.04|	
+|Yes	|80.49|
+
+There is a visible difference in the mean of income between Subscriber vs Non Subscriber groups.
+
+## Investment Amount vs subscriber
+
+![alt text](https://learningintution.github.io/image/InvestAmtToSubscriber.jpeg)
+
+|Subscriber|Investment Amount|
+|:-------|-------:|
+|No	|24.95|			
+|Yes	|53.00|
+
+There is a marked difference in the mean of investment amount between subscriber vs non subscriber groups.
 
 To Do: 
 - Density plot for group 1 and group 2
@@ -70,5 +89,3 @@ Solving for a1 and a2 with these goal and constraint will leads us to an equatio
 To Do:
 - Density plot for group 1 and group 2 soiled by optimal arbitraty a1 and a2
 - Density plot for overall for the complete data set soiled by optimal a1 and a2
-
-
