@@ -89,5 +89,3 @@ Solving for a1 and a2 with these goal and constraint will leads us to an equatio
 To Do:
 - Density plot for group 1 and group 2 soiled by optimal arbitraty a1 and a2
 - Density plot for overall for the complete data set soiled by optimal a1 and a2
-
-
