@@ -82,13 +82,14 @@ The following diagram shows a visual represntation of the two groups with respec
 
 The following table shows the distance between the means:
 
-|Independent Variable|Scaled mean of Subscribers|Scaled mean of Non Subscribers|Scaled Mean Distance|Overlaping Area %|
+|Independent Variable|Scaled mean of Non Subscribers|Scaled mean of Subscribers|Scaled Mean Distance|Overlaping Area %|
 |---|---:|---:|---:|---:|
 | Income | -0.3098|0.6541|0.9639 | 28.15% |
 | Investment Amount |-0.5528|1.1670| 1.7198 | 11.40% |
 | Z Score |  -1.4952|1.4952|2.9904| 10.75% |
 
 Mean distance between zscore of the groups:
+
 ```
 z1 - z2 = a1 (x1g1 - x1g2) + a2 (x2g2 - x2g2)
 ```
@@ -98,7 +99,6 @@ This seems to be a better indicator to divide the two groups than Income and Inv
 ## Steps to perform discriminant analysis 
 
 The following discussion shows how to get such a zscore from income and investment amount.
-
 
 Goal is to Maximise (z1 - z2)
 
