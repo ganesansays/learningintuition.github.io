@@ -1,4 +1,8 @@
-# Linear Discriminant Analysis
+# Linear Discriminant Analysis Intution
+
+Linear discriminant analysis is a method to find a linear combination of features that seperates two or more classes/groups of objects or events. LDA is a predisisor to logistic regression to perform classification. If the problem statement and dataset satisfies the requirement of linear discriminant analysis, it always out performs logistic regression interms of accuracy.
+
+Find a very rough comparision of logistic regression and linear discriminant analysis [here](https://stats.stackexchange.com/questions/95247/logistic-regression-vs-lda-as-two-class-classifiers).
 
 ## Example: Wall Street Journal Subscription
 
@@ -22,6 +26,8 @@ Let us try to understand with a sample data set.
 |60	|72.9	|39.4	|Yes|
 |61	|90.9	|63.8	|Yes|
 |...	|...	|...	|...|
+
+Download the full csv file [here](https://learningintution.github.io/data/DiscriWinston.csv).
 
 # Exploring the data
 
@@ -61,7 +67,11 @@ Density plots of investment amount does not have a overlap (11.4%) as big as inc
 
 ![alt text](https://learningintution.github.io/image/InestmentAmtBySubscriberDensity.png)
 
-## Goal of Discriminant Analsysis:
+## Goal of Discriminant Analsysis
+
+The following diagram shows a visual represntation of the two groups with respect to income and investment amount. The aim is to maximize the distance between the blue and the red dots.
+
+![alt text](https://learningintution.github.io/image/ScatterPlotIncomeInvestment.png)
 
 Let us assume we modify the mean of income and investment by some arbitraty values a1 and a2 and arrive at a new set of income and investment values that gives maximum distance between the mean and a less overlapping area.
 
@@ -72,40 +82,48 @@ z1 = a1 * (mean income of subscribers) + a2 * (mean investment amount of subscri
 z2 = a1 * (mean income of non-subscribers) + a2 * (mean investment amount of non subscribers)
 ```
 
-Below diagram shows a zscore density plots for z1 and z2 which has lesser overlap (10.75%) compared to invesemnt amount and income. 
+Without worring about how we find out the optimal a1 and a2, the below diagram shows zscore density plots for z1 and z2 for an optimal a1 and a2 which has lesser overlap (10.75%) compared to invesemnt amount and income. 
 
 ![alt text](https://learningintution.github.io/image/ZScoreDensity.png)
 
-The following diagram shows a visual represntation of the two groups with respect to income and investment amount. The aim is to maximize the distance between the blue and the red dots.
-
-![alt text](https://learningintution.github.io/image/ScatterPlotIncomeInvestment.png)
-
-The following table shows the distance between the means:
+The following table shows the distance between the means. We can see that the mean distance for the zscore is 2.9904 which is significantly higger than the other two mean distance of 0.96 and 1.72 respectively.
 
 |Independent Variable|Scaled mean of Non Subscribers|Scaled mean of Subscribers|Scaled Mean Distance|Overlaping Area %|
 |---|---:|---:|---:|---:|
-| Income | -0.3098|0.6541|0.9639 | 28.15% |
-| Investment Amount |-0.5528|1.1670| 1.7198 | 11.40% |
-| Z Score |  -1.4952|1.4952|2.9904| 10.75% |
+| Income | -0.3098|0.6541|**0.9639** | 28.15% |
+| Investment Amount |-0.5528|1.1670| **1.7198** | 11.40% |
+| Z Score |  -1.4952|1.4952|**2.9904**| 10.75% |
 
-Mean distance between zscore of the groups:
+Based on the discussions so far we can set our goal to get such variables a1 and a2 that gives zcore which maximizes the distance between the mean while keeping the overlaping area minimum.
+
+## Solving for a1 and a2
+
+Goal: Maximize the distance between the mean of subscriber and non subscriber, with a constraint of minimizing the overlap percentage.
+
+Maximizing the distance between the mean of subscriber and non subscriber can be achieved by maximizing the distance between the zscores.
 
 ```
-z1 - z2 = a1 (x1g1 - x1g2) + a2 (x2g2 - x2g2)
+z1 - z2 =   a1 (mean of income of subscriber - mean of income of non subscriber) 
+          + a2 (mean of investment amt of subscriber - mean of investment amt of non subscriber)
 ```
 
-This seems to be a better indicator to divide the two groups than Income and Investment Amount individually. Our goal is to get such variables a1 and a2 that gives a zcore which maximizes the distance between the mean.
+Constraining the overlap percentage to be minimal can be achieved by constraining the pooled variance to be less than or equal to one. 
 
-## Steps to perform discriminant analysis 
+Pooled variance is nothing but the variance weighted by the group contribution.
+```
+Pooled variance = ( (variance of subscriber) * (degrees of freedom of subscriber - 1) + 
+                    (variance of non subscriber) * (degrees of freedom of non subscriber - 1)
+                  )/
+                  (
+                     degrees of freedom of subscriber + 
+                     degrees of freedom of non subscriber - 
+                     2
+                  )
+```
 
-The following discussion shows how to get such a zscore from income and investment amount.
+Solving for a1 and a2 can be done using excel solver or using R. Keep watching the space for "Performing LDA using R"
 
-Goal is to Maximise (z1 - z2)
+## Conclusion
+Though linear discriminant analysis has quite strigient prerequisites than logistic regression, it has a wide applicability in classification problems and out performs logistic regression. It has better explainatory power than logistic regression.
 
-Constraint: Pooled Variance of group 1 and group 2
-
-Pooled variance = ((variance of g1) * (dfG1 - 1) + (variance of g2) * (dfG2 - 1))/(dfg1 + dfg2 - 2)
-
-Solving for a1 and a2 with these goal and constraint will leads us to an equation that maximises.
-
-[Linear Discriminant Analysis - Wikipidea link filed with Maths](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
+If you have reached thus far, you should have liked the posts! Please do mail me your feedback at ganesansays@gmail.com, until I add inline comment to the page.
