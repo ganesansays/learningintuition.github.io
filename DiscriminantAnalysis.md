@@ -66,14 +66,17 @@ Goal of the discriminant analysis is to maximize the mean difference between the
 Above diagram shows a zscore density plot which has lesser overlap (10.75%) compared to invesemnt amount and income. It also has the great distance between the mean of the two groups.
 
 
-|Independent Variable|Mean Distance|Overlaping Area %|
+|Independent Variable|Scaled Mean Distance|Overlaping Area %|
 |---|---:|---:|
 | Income | 0.9639 | 28.15% |
-| Investment Amount | 1.7198 | 11.4% |
+| Investment Amount | 1.7198 | 11.40% |
 | Z Score | 2.9904 | 10.75% |
+*scaled mean distance denotes both income and investment amount scaled to make it comparable to zscore.
 
 
 This seems to be a better indicator to divide the two groups than Income and Investment Amount individually. Our goal is to get such a parameter from Income and Investment Amount.
+
+The following discussion shows how to get such a zscore from income and investment amount.
 
 ```
 z1 = a1 * (mean income of owners) + a2 * (mean lotsize of owners)
