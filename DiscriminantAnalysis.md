@@ -121,7 +121,7 @@ Pooled variance = ( (variance of subscriber) * (degrees of freedom of subscriber
                   )
 ```
 
-The above can be done using excel solver or using R. Keep watching the space for "Performing LDA using R"
+Solving for a1 and a2 can be done using excel solver or using R. Keep watching the space for "Performing LDA using R"
 
 ## Conclusion
 Though linear discriminant analysis has quite strigient prerequisites than logistic regression, it has a wide applicability in classification problems and out performs logistic regression. It has better explainatory power than logistic regression.
