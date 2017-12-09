@@ -126,4 +126,4 @@ The above can be done using excel solver or using R. Keep watching the space for
 ## Conclusion
 Though linear discriminant analysis has quite strigient prerequisites than logistic regression, it has a wide applicability in classification problems and out performs logistic regression. It has better explainatory power than logistic regression.
 
-If you have reached thus far, you should have liked the posts! Please do mail me your feedback, until I add inline comment to the page.
+If you have reached thus far, you should have liked the posts! Please do mail me your feedback at ganesansays@gmail.com, until I add inline comment to the page.
