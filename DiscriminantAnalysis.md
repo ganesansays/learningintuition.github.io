@@ -72,7 +72,7 @@ Above diagram shows a zscore density plot which has lesser overlap (10.75%) comp
 | Investment Amount | 1.7198 | 11.40% |
 | Z Score | 2.9904 | 10.75% |
 
-<span style="font-size: xx-small">Scaled mean distance denotes both income and investment amount scaled to make it comparable to zscore.</span>
+<dd style="font-size: xx-small;">Scaled mean distance denotes both income and investment amount scaled to make it comparable to zscore.</dd>
 
 
 This seems to be a better indicator to divide the two groups than Income and Investment Amount individually. Our goal is to get such a parameter from Income and Investment Amount.
