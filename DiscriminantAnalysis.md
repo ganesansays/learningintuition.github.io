@@ -104,15 +104,61 @@ Goal: Maximize the distance between the mean of group 1 and group 2, with a cons
 
 Maximizing the distance between the mean of group 1 and group 2 can be achieved by maximizing the distance between the zscores.
 ```
-z1 - z2 = a1 (x1g1 - x1g2) + a2 (x2g2 - x2g2)
+z1 - z2 =   a1 (mean of income of subscriber - mean of income of non subscriber) 
+          + a2 (mean of investment amt of subscriber - mean of investment amt of non subscriber)
 ```
 
-Minimizing the overlap percentage can be achieved by minimizing the pooled variance
+Constraining the overlap percentage to be minimal can be achieved by constraining the pooled variance to be less than or equal to one. 
 
+Pooled variance is nothing but the variance weighted by the group contribution.
 ```
-Pooled variance = ((variance of group1) * (degrees of freedom of group1 - 1) + (variance of group2) * (degrees of freedom of group2 - 1))/(degrees of freedom of group1 + degrees of freedom of group2 - 2)
+Pooled variance = ( (variance of subscriber) * (degrees of freedom of subscriber - 1) + 
+                    (variance of non subscriber) * (degrees of freedom of non subscriber - 1)
+                  )/
+                  (
+                     degrees of freedom of subscriber + 
+                     degrees of freedom of non subscriber - 
+                     2
+                  )
 ```
 
-Solving for a1 and a2 with these goal and constraint will leads us to an equation that maximises.
+We can solve for a1 and a2 with the goal and the constraint to arrive at a1 and a2 using excel. 
+
+Let us see how we can get the same using R.
+
+## Performing linear discriminant analysis(lda) in R
+
+### Validating applicability of lda
+Before doing linear discriminant analysis we need to verify if lda is applicable for the given data set.
+
+We can do that by understanding if WSJ subscription is correlated by Income and Investment simultaneously. In other words we need to validate if Income and Investment amount is a function of WSJ subscription, which is a reverse of lda that we discussed so far. Since there are multiple continuous dependent variable and one independent categorical variable, we can use Manova for this purpose. If there was only one continuous dependent variable and one idenpendent categorical variable, we could have used Anova.
+
+```{r}
+x = cbind(as.matrix(originalData[,2:3]))
+y = as.vector(originalData[,5])
+summary(manova(x~y, data=originalData), test="Wilks")
+```
+
+The result of this is:
+```
+ Response Income :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+y            1  3821.9  3821.9  21.158 1.522e-05 ***
+Residuals   82 14812.0   180.6                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+ Response InvestAmt :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+y            1 14412.6 14412.6  154.22 < 2.2e-16 ***
+Residuals   82  7663.4    93.5                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+The result shows that there exists a high siginficant relationship between WSJ to Income and Investment Amount simultaneously.
+
+### Performing lda
+
 
 [Linear Discriminant Analysis - Wikipidea link filed with Maths](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
