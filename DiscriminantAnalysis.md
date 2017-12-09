@@ -32,7 +32,9 @@ Both Summary and box plot reveals a visible difference between the subscriber an
 |WSJ Subscriber   |Min. |1st Qu.  |Median    |Mean |3rd Qu.    |Max.| 
 |-------|-------:|-------:|---------:|---------:|---------:|---------:|
 |No  |32.70   |57.80   |64.50   |66.04   |76.40   |93.70| 
-|Yes  |53.90   |74.45   |83.50   |80.49   |87.15  |100.70| 
+|Yes  |53.90   |74.45   |83.50   |80.49   |87.15  |100.70|  
+
+Mean of scaled income values are -0.3098 for Non subscribers and 0.6541 for subscribers. We will be using this in subsequent discussion.
 
 ![alt text](https://learningintution.github.io/image/IncomeBySubscriber.png)
 
@@ -44,6 +46,8 @@ Both the summary and box plot reveals a marked difference between the subscriber
 |-------|-------:|-------:|---------:|---------:|---------:|---------:|
 |No  |   2.30|   19.30|   24.00|   24.95|   31.90|   51.00| 
 |Yes  |36.40|   47.45|   55.50|   53.00|   59.30|   66.60| 
+
+Mean of scaled investment amount values are -0.5528 for Non subscribers and 1.1670 for subscribers. We will be using this in subsequent discussion.
 
 ![alt text](https://learningintution.github.io/image/InvestmentAmountBySubscriber.png)
 
@@ -59,18 +63,17 @@ Density plots of investment amount does not have a overlap (11.4%) as big as inc
 
 ## Discriminant Analsysis:
 
-Goal of the discriminant analysis is to maximize the mean difference between the two groups with respect to both Income and Investment Amount.
+Let us assume we modify the mean of income and investment by some arbitraty values a1 and a2 and arrive at a new set of income and investment values that gives maximum distance between the mean and a less overlapping area.
 
 ![alt text](https://learningintution.github.io/image/ZScoreDensity.png)
 
-Above diagram shows a zscore density plot which has lesser overlap (10.75%) compared to invesemnt amount and income. It also has the great distance between the mean of the two groups.
+Above diagram shows a zscore (sum of values of income and investment amount modified) density plot which has lesser overlap (10.75%) compared to invesemnt amount and income. It also has the great distance between the mean of the two groups.
 
-
-|Independent Variable|Scaled Mean Distance|Overlaping Area %|
-|---|---:|---:|
-| Income | 0.9639 | 28.15% |
-| Investment Amount | 1.7198 | 11.40% |
-| Z Score | 2.9904 | 10.75% |
+|Independent Variable|Scaled mean of Subscribers|Scaled mean of Non Subscribers|Scaled Mean Distance|Overlaping Area %|
+|---|---:|---:|---:|---:|
+| Income | -0.3098|0.6541|0.9639 | 28.15% |
+| Investment Amount |-0.5528|1.1670| 1.7198 | 11.40% |
+| Z Score | 2.9904 |-1.4952|1.4952| 10.75% |
 
 <span style="font-size: xx-small;">*Scaled mean distance denotes mean of income and investment amount on their respective scaled values to make it comparable to zscore.*</span>
 
