@@ -7,9 +7,7 @@ Let us say, we like to understand how income of a person and the amount he has i
 * Y (Dependent Variable) = Subscription
 * X (Independent Variables) = Income and Investment Amount
 
-[Linear Discriminant Analysis - Wikipidea link filed with Maths](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
-
-Let us try to understand intutively with an sample data set.
+Let us try to understand with a sample data set.
 
 |Person	|Income	|InvestAmt	|WSJSubscriber|
 |-------:|-------:|-------:|---------|
@@ -27,51 +25,80 @@ Let us try to understand intutively with an sample data set.
 
 # Exploring the data
 
-## Income vs subscriber
+## Summarizing Income by subscriber
 
-### Comparing the box plot
-![alt text](https://learningintution.github.io/image/IncomeToSubscriber.jpeg)
+Both Summary and box plot reveals a visible difference between the subscriber and non subscriber groups with respect to  income.
 
-### Comparing the mean
+|WSJ Subscriber   |Min. |1st Qu.  |Median    |Mean |3rd Qu.    |Max.| 
+|-------|-------:|-------:|---------:|---------:|---------:|---------:|
+|No  |32.70   |57.80   |64.50   |66.04   |76.40   |93.70| 
+|Yes  |53.90   |74.45   |83.50   |80.49   |87.15  |100.70|  
 
-|Subscriber|Income|
-|:-------|-------:|
-|No	|66.04|	
-|Yes	|80.49|
+Mean of scaled income values are -0.3098 for Non subscribers and 0.6541 for subscribers. We will be using this in subsequent discussion.
 
-### Comparing the density distribution
-![alt text](https://learningintution.github.io/image/IncomeToSubscriberDensityComp.jpeg)
+![alt text](https://learningintution.github.io/image/IncomeBySubscriber.png)
 
-There is a visible difference in the mean of income between Subscriber vs Non Subscriber groups.
+## Sumarizing Investment Amount by subscriber
 
-## Investment Amount vs subscriber
+Both the summary and box plot reveals a marked difference between the subscriber and non subscriber groups with respect to the investment amount.
 
-### Comparing the box plot
-![alt text](https://learningintution.github.io/image/InvestAmtToSubscriber.jpeg)
+|WSJ Subscriber   |Min. |1st Qu.  |Median    |Mean |3rd Qu.    |Max.| 
+|-------|-------:|-------:|---------:|---------:|---------:|---------:|
+|No  |   2.30|   19.30|   24.00|   24.95|   31.90|   51.00| 
+|Yes  |36.40|   47.45|   55.50|   53.00|   59.30|   66.60| 
 
-### Comparing the mean
+Mean of scaled investment amount values are -0.5528 for Non subscribers and 1.1670 for subscribers. We will be using this in subsequent discussion.
 
-|Subscriber|Investment Amount|
-|:-------|-------:|
-|No	|24.95|			
-|Yes	|53.00|
+![alt text](https://learningintution.github.io/image/InvestmentAmountBySubscriber.png)
 
-There is a marked difference in the mean of investment amount between subscriber vs non subscriber groups.
+### Comparing the density plot
 
-To Do: 
-- Density plot for group 1 and group 2
-- Density plot for overall for the complete data set
+Density plots of income shows there is a significant overlap (28.15%) between the subscriber and non subscriber group. 
 
-To Do:
-- Density plot for group 1 and group 2 soiled by some arbitraty a1 and a2
-- Density plot for overall for the complete data set soiled by some arbitraty a1 and a2
+![alt text](https://learningintution.github.io/image/IncomeBySubscriberDensity.png)
+
+Density plots of investment amount does not have a overlap (11.4%) as big as income. 
+
+![alt text](https://learningintution.github.io/image/InestmentAmtBySubscriberDensity.png)
+
+## Goal of Discriminant Analsysis:
+
+Let us assume we modify the mean of income and investment by some arbitraty values a1 and a2 and arrive at a new set of income and investment values that gives maximum distance between the mean and a less overlapping area.
+
+Let us call the sum of values of modified income and investment as a result of the modified mean as zscore. Below is a mathematicsl representation of the zscores.
 
 ```
-z1 = a1 * (mean income of owners) + a2 * (mean lotsize of owners)
-z2 = a1 * (mean income of non-owners) + a2 * (mean lotsize of non owners)
+z1 = a1 * (mean income of subscribers) + a2 * (mean investment amount of subscribers)
+z2 = a1 * (mean income of non-subscribers) + a2 * (mean investment amount of non subscribers)
+```
 
+Below diagram shows a zscore density plots for z1 and z2 which has lesser overlap (10.75%) compared to invesemnt amount and income. 
+
+![alt text](https://learningintution.github.io/image/ZScoreDensity.png)
+
+Mean distance of the two groups:
+```
 z1 - z2 = a1 (x1g1 - x1g2) + a2 (x2g2 - x2g2)
 ```
+
+The following diagram shows a visual represntation of the two groups with respect to income and investment amount. The aim is to maximize the distance between the blue and the red dots.
+
+![alt text](https://learningintution.github.io/image/ScatterPlotIncomeInvestment.png)
+
+The following table shows the distance between the means:
+
+|Independent Variable|Scaled mean of Subscribers|Scaled mean of Non Subscribers|Scaled Mean Distance|Overlaping Area %|
+|---|---:|---:|---:|---:|
+| Income | -0.3098|0.6541|0.9639 | 28.15% |
+| Investment Amount |-0.5528|1.1670| 1.7198 | 11.40% |
+| Z Score | 2.9904 |-1.4952|1.4952| 10.75% |
+
+This seems to be a better indicator to divide the two groups than Income and Investment Amount individually. Our goal is to get such variables a1 and a2 that gives a zcore which maximizes the distance between the mean.
+
+## Steps to perform discriminant analysis 
+
+The following discussion shows how to get such a zscore from income and investment amount.
+
 
 Goal is to Maximise (z1 - z2)
 
@@ -81,6 +108,4 @@ Pooled variance = ((variance of g1) * (dfG1 - 1) + (variance of g2) * (dfG2 - 1)
 
 Solving for a1 and a2 with these goal and constraint will leads us to an equation that maximises.
 
-To Do:
-- Density plot for group 1 and group 2 soiled by optimal arbitraty a1 and a2
-- Density plot for overall for the complete data set soiled by optimal a1 and a2
+[Linear Discriminant Analysis - Wikipidea link filed with Maths](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
