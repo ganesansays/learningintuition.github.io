@@ -96,7 +96,7 @@ Mean distance between zscore of the groups:
 z1 - z2 = a1 (x1g1 - x1g2) + a2 (x2g2 - x2g2)
 ```
 
-This seems to be a better indicator to divide the two groups than Income and Investment Amount individually. Our goal is to get such variables a1 and a2 that gives a zcore which maximizes the distance between the mean.
+Based on the discussions so far we can set our goal to get such variables a1 and a2 that gives zcore which maximizes the distance between the mean while keeping the overlaping area minimum.
 
 ## Steps to perform discriminant analysis 
 
