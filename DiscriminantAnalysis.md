@@ -27,17 +27,14 @@ Let us try to understand intutively with an sample data set.
 
 # Exploring the data
 
-## Income vs subscriber
+## Summarize Income by subscriber
 
-### Comparing the box plot
-![alt text](https://learningintution.github.io/image/IncomeBySubscriber.png)
+|WSJSubscriber   |Min. |1st Qu.  |Median    |Mean |3rd Qu.    |Max.| 
+|-------|-------:|-------:|---------:|---------:|---------:|---------:|
+|No  |32.70   |57.80   |64.50   |66.04   |76.40   |93.70| 
+|Yes  |53.90   |74.45   |83.50   |80.49   |87.15  |100.70| 
 
-### Comparing the mean
-
-|Subscriber|Income|
-|:-------|-------:|
-|No	|66.04|	
-|Yes	|80.49|
+![alt text](https://learningintution.github.io/image/IncomeBySubscriber.png, "Box Plot")
 
 There is a visible difference in the mean of income between Subscriber vs Non Subscriber groups.
 
@@ -59,14 +56,6 @@ There is a marked difference in the mean of investment amount between subscriber
 ![alt text](https://learningintution.github.io/image/IncomeBySubscriberDensity.png)
 
 ![alt text](https://learningintution.github.io/image/InestmentAmtBySubscriberDensity.png)
-
-To Do: 
-- Density plot for group 1 and group 2
-- Density plot for overall for the complete data set
-
-To Do:
-- Density plot for group 1 and group 2 soiled by some arbitraty a1 and a2
-- Density plot for overall for the complete data set soiled by some arbitraty a1 and a2
 
 ```
 z1 = a1 * (mean income of owners) + a2 * (mean lotsize of owners)
