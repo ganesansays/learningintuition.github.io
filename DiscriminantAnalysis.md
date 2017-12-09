@@ -1,5 +1,7 @@
 # Linear Discriminant Analysis Intution
 
+Linear discriminant analysis is a method to find a linear combination of features that seperates two or more classes/groups of objects or events. LDA is an predisisor to logistics regression to perform classification. If the problem statement and dataset satisfies the requirement of linear discriminant analysis, it always out performs logistic regression interms of accuracy.
+
 ## Example: Wall Street Journal Subscription
 
 Let us say, we like to understand how income of a person and the amount he has invested affects his subscription choice to Wall Street Journal. In other words can we discriminate the two groups, subscribers and non-subscribrs based on the income of the person and the amount he has invested.  
