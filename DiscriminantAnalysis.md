@@ -1,6 +1,8 @@
 # Linear Discriminant Analysis Intution
 
-Linear discriminant analysis is a method to find a linear combination of features that seperates two or more classes/groups of objects or events. LDA is an predisisor to logistics regression to perform classification. If the problem statement and dataset satisfies the requirement of linear discriminant analysis, it always out performs logistic regression interms of accuracy.
+Linear discriminant analysis is a method to find a linear combination of features that seperates two or more classes/groups of objects or events. LDA is a predisisor to logistic regression to perform classification. If the problem statement and dataset satisfies the requirement of linear discriminant analysis, it always out performs logistic regression interms of accuracy.
+
+Find a very rough comparision of logistic regression and linear discriminant analysis [here](https://stats.stackexchange.com/questions/95247/logistic-regression-vs-lda-as-two-class-classifiers).
 
 ## Example: Wall Street Journal Subscription
 
