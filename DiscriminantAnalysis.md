@@ -86,7 +86,7 @@ Without worring about how we find out the optimal a1 and a2, the below diagram s
 
 ![alt text](https://learningintution.github.io/image/ZScoreDensity.png)
 
-The following table shows the distance between the means. We can see that the mean distance for the zscore is 2.9904 which is significantly higger than the other two mean score.
+The following table shows the distance between the means. We can see that the mean distance for the zscore is 2.9904 which is significantly higger than the other two mean distance of 0.96 and 1.72 respectively.
 
 |Independent Variable|Scaled mean of Non Subscribers|Scaled mean of Subscribers|Scaled Mean Distance|Overlaping Area %|
 |---|---:|---:|---:|---:|
