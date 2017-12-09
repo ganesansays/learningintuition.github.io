@@ -63,7 +63,7 @@ Density plots of investment amount does not have a overlap (11.4%) as big as inc
 
 ![alt text](https://learningintution.github.io/image/InestmentAmtBySubscriberDensity.png)
 
-## Goal of Discriminant Analsysis:
+## Goal of Discriminant Analsysis
 
 The following diagram shows a visual represntation of the two groups with respect to income and investment amount. The aim is to maximize the distance between the blue and the red dots.
 
@@ -98,15 +98,20 @@ z1 - z2 = a1 (x1g1 - x1g2) + a2 (x2g2 - x2g2)
 
 Based on the discussions so far we can set our goal to get such variables a1 and a2 that gives zcore which maximizes the distance between the mean while keeping the overlaping area minimum.
 
-## Steps to perform discriminant analysis 
+## Solving for a1 and a2
 
-The following discussion shows how to get such a zscore from income and investment amount.
+Goal: Maximize the distance between the mean of group 1 and group 2, with a constaint of minimizing the overlap percentage.
 
-Goal is to Maximise (z1 - z2)
+Maximizing the distance between the mean of group 1 and group 2 can be achieved by maximizing the distance between the zscores.
+```
+z1 - z2 = a1 (x1g1 - x1g2) + a2 (x2g2 - x2g2)
+```
 
-Constraint: Pooled Variance of group 1 and group 2
+Minimizing the overlap percentage can be achieved by minimizing the pooled variance
 
-Pooled variance = ((variance of g1) * (dfG1 - 1) + (variance of g2) * (dfG2 - 1))/(dfg1 + dfg2 - 2)
+```
+Pooled variance = ((variance of group1) * (degrees of freedom of group1 - 1) + (variance of group2) * (degrees of freedom of group2 - 1))/(degrees of freedom of group1 + degrees of freedom of group2 - 2)
+```
 
 Solving for a1 and a2 with these goal and constraint will leads us to an equation that maximises.
 
