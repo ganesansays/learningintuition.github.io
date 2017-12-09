@@ -85,7 +85,8 @@ The following diagram shows a visual represntation of the two groups with respec
 
 ![alt text](https://learningintution.github.io/image/ScatterPlotIncomeInvestment.png)
 
-The following table 
+The following table shows the distance between the means:
+
 |Independent Variable|Scaled mean of Subscribers|Scaled mean of Non Subscribers|Scaled Mean Distance|Overlaping Area %|
 |---|---:|---:|---:|---:|
 | Income | -0.3098|0.6541|0.9639 | 28.15% |
