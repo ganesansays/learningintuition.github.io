@@ -1,4 +1,8 @@
-{% include disqus.html %}
+---
+layout: default
+comments: true
+# other options
+---
 
 # Recent Blogs
 
