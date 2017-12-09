@@ -23,6 +23,8 @@ Let us try to understand with a sample data set.
 |61	|90.9	|63.8	|Yes|
 |...	|...	|...	|...|
 
+Download the full csv file [here](https://learningintution.github.io/data/DiscriWinston.csv)
+
 # Exploring the data
 
 ## Summarizing Income by subscriber
