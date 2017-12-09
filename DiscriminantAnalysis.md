@@ -34,7 +34,7 @@ Let us try to understand intutively with an sample data set.
 |No  |32.70   |57.80   |64.50   |66.04   |76.40   |93.70| 
 |Yes  |53.90   |74.45   |83.50   |80.49   |87.15  |100.70| 
 
-![alt text](https://learningintution.github.io/image/IncomeBySubscriber.png =300x300)
+![alt text](https://learningintution.github.io/image/IncomeBySubscriber.png)
 
 There is a visible difference in the mean of income between Subscriber vs Non Subscriber groups.
 
