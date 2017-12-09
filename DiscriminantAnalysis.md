@@ -90,15 +90,15 @@ The following table shows the distance between the means. We can see that the me
 
 |Independent Variable|Scaled mean of Non Subscribers|Scaled mean of Subscribers|Scaled Mean Distance|Overlaping Area %|
 |---|---:|---:|---:|---:|
-| Income | -0.3098|0.6541|0.9639 | 28.15% |
-| Investment Amount |-0.5528|1.1670| 1.7198 | 11.40% |
-| Z Score |  -1.4952|1.4952|2.9904| 10.75% |
+| Income | -0.3098|0.6541|**0.9639** | 28.15% |
+| Investment Amount |-0.5528|**1.1670**| 1.7198 | 11.40% |
+| Z Score |  -1.4952|1.4952|**2.9904**| 10.75% |
 
 Based on the discussions so far we can set our goal to get such variables a1 and a2 that gives zcore which maximizes the distance between the mean while keeping the overlaping area minimum.
 
 ## Solving for a1 and a2
 
-Goal: Maximize the distance between the mean of subscriber and non subscriber, with a constaint of minimizing the overlap percentage.
+Goal: Maximize the distance between the mean of subscriber and non subscriber, with a constraint of minimizing the overlap percentage.
 
 Maximizing the distance between the mean of subscriber and non subscriber can be achieved by maximizing the distance between the zscores.
 
