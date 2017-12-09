@@ -65,6 +65,10 @@ Density plots of investment amount does not have a overlap (11.4%) as big as inc
 
 ## Goal of Discriminant Analsysis:
 
+The following diagram shows a visual represntation of the two groups with respect to income and investment amount. The aim is to maximize the distance between the blue and the red dots.
+
+![alt text](https://learningintution.github.io/image/ScatterPlotIncomeInvestment.png)
+
 Let us assume we modify the mean of income and investment by some arbitraty values a1 and a2 and arrive at a new set of income and investment values that gives maximum distance between the mean and a less overlapping area.
 
 Let us call the sum of values of modified income and investment as a result of the modified mean as zscore. Below is a mathematicsl representation of the zscores.
@@ -74,13 +78,9 @@ z1 = a1 * (mean income of subscribers) + a2 * (mean investment amount of subscri
 z2 = a1 * (mean income of non-subscribers) + a2 * (mean investment amount of non subscribers)
 ```
 
-Below diagram shows a zscore density plots for z1 and z2 which has lesser overlap (10.75%) compared to invesemnt amount and income. 
+Without worring about how we find out the optimal a1 and a2, the below diagram shows zscore density plots for z1 and z2 for an optimal a1 and a2 which has lesser overlap (10.75%) compared to invesemnt amount and income. 
 
 ![alt text](https://learningintution.github.io/image/ZScoreDensity.png)
-
-The following diagram shows a visual represntation of the two groups with respect to income and investment amount. The aim is to maximize the distance between the blue and the red dots.
-
-![alt text](https://learningintution.github.io/image/ScatterPlotIncomeInvestment.png)
 
 The following table shows the distance between the means:
 
