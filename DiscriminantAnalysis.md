@@ -7,9 +7,7 @@ Let us say, we like to understand how income of a person and the amount he has i
 * Y (Dependent Variable) = Subscription
 * X (Independent Variables) = Income and Investment Amount
 
-[Linear Discriminant Analysis - Wikipidea link filed with Maths](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
-
-Let us try to understand intutively with an sample data set.
+Let us try to understand with a sample data set.
 
 |Person	|Income	|InvestAmt	|WSJSubscriber|
 |-------:|-------:|-------:|---------|
@@ -27,35 +25,53 @@ Let us try to understand intutively with an sample data set.
 
 # Exploring the data
 
-## Summarize Income by subscriber
+## Summarizing Income by subscriber
 
-|WSJSubscriber   |Min. |1st Qu.  |Median    |Mean |3rd Qu.    |Max.| 
+Both Summary and box plot reveals a visible difference between the subscriber and non subscriber groups with respect to  income.
+
+|WSJ Subscriber   |Min. |1st Qu.  |Median    |Mean |3rd Qu.    |Max.| 
 |-------|-------:|-------:|---------:|---------:|---------:|---------:|
 |No  |32.70   |57.80   |64.50   |66.04   |76.40   |93.70| 
 |Yes  |53.90   |74.45   |83.50   |80.49   |87.15  |100.70| 
 
 ![alt text](https://learningintution.github.io/image/IncomeBySubscriber.png)
 
-There is a visible difference in the mean of income between Subscriber vs Non Subscriber groups.
+## Sumarizing Investment Amount by subscriber
 
-## Investment Amount vs subscriber
+Both the summary and box plot reveals a marked difference between the subscriber and non subscriber groups with respect to the investment amount.
 
-### Comparing the box plot
+|WSJ Subscriber   |Min. |1st Qu.  |Median    |Mean |3rd Qu.    |Max.| 
+|-------|-------:|-------:|---------:|---------:|---------:|---------:|
+|No  |   2.30|   19.30|   24.00|   24.95|   31.90|   51.00| 
+|Yes  |36.40|   47.45|   55.50|   53.00|   59.30|   66.60| 
+
 ![alt text](https://learningintution.github.io/image/InvestmentAmountBySubscriber.png)
 
-### Comparing the mean
+### Comparing the density plot
 
-|Subscriber|Investment Amount|
-|:-------|-------:|
-|No	|24.95|			
-|Yes	|53.00|
+Density plots of income shows there is a significant overlap (28.15%) between the subscriber and non subscriber group. 
 
-There is a marked difference in the mean of investment amount between subscriber vs non subscriber groups.
-
-### Comparing the density distribution
 ![alt text](https://learningintution.github.io/image/IncomeBySubscriberDensity.png)
 
+Density plots of investment amount does not have a overlap (11.4%) as big as income. 
+
 ![alt text](https://learningintution.github.io/image/InestmentAmtBySubscriberDensity.png)
+
+## Discriminant Analsysis:
+
+Goal of the discriminant analysis is to maximize the mean difference between the two groups with respect to both Income and Investment Amount.
+
+![alt text](https://learningintution.github.io/image/ZScoreDensity.png)
+
+Above diagram shows a zscore density plot which has lesser overlap (10.75%) compared to invesemnt amount and income. It also has the great distance between the mean of the two groups.
+
+|Independent Variable|Mean Distance|Overlaping Area %|
+|...|...:|...:|
+|Income|0.9639|28.15%|
+|Investment Amount|1.7198|11.4%|
+|Z Score|2.9904|10.75%|
+
+This seems to be a better indicator to divide the two groups than Income and Investment Amount individually. Our goal is to get such a parameter from Income and Investment Amount.
 
 ```
 z1 = a1 * (mean income of owners) + a2 * (mean lotsize of owners)
@@ -72,6 +88,4 @@ Pooled variance = ((variance of g1) * (dfG1 - 1) + (variance of g2) * (dfG2 - 1)
 
 Solving for a1 and a2 with these goal and constraint will leads us to an equation that maximises.
 
-To Do:
-- Density plot for group 1 and group 2 soiled by optimal arbitraty a1 and a2
-- Density plot for overall for the complete data set soiled by optimal a1 and a2
+[Linear Discriminant Analysis - Wikipidea link filed with Maths](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
