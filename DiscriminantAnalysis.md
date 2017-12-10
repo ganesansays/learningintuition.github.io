@@ -4,6 +4,8 @@ Linear discriminant analysis is a method to find a linear combination of feature
 
 Find a very rough comparision of logistic regression and linear discriminant analysis [here](https://stats.stackexchange.com/questions/95247/logistic-regression-vs-lda-as-two-class-classifiers).
 
+R code for the graphs and summaries can be found [here](http://rpubs.com/Ganesan/339951).
+
 ## Example: Wall Street Journal Subscription
 
 Let us say, we like to understand how income of a person and the amount he has invested affects his subscription choice to Wall Street Journal. In other words can we discriminate the two groups, subscribers and non-subscribrs based on the income of the person and the amount he has invested.  
