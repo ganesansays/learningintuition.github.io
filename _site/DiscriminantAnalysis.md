@@ -1,8 +1,10 @@
-# Linear Discriminant Analysis Intution
+# Linear Discriminant Analysis Intuition
 
 Linear discriminant analysis is a method to find a linear combination of features that seperates two or more classes/groups of objects or events. LDA is a predisisor to logistic regression to perform classification. If the problem statement and dataset satisfies the requirement of linear discriminant analysis, it always out performs logistic regression interms of accuracy.
 
 Find a very rough comparision of logistic regression and linear discriminant analysis [here](https://stats.stackexchange.com/questions/95247/logistic-regression-vs-lda-as-two-class-classifiers).
+
+R code for the graphs and summaries can be found [here](http://rpubs.com/Ganesan/339951).
 
 ## Example: Wall Street Journal Subscription
 
@@ -27,7 +29,11 @@ Let us try to understand with a sample data set.
 |61	|90.9	|63.8	|Yes|
 |...	|...	|...	|...|
 
+<<<<<<< HEAD
 Download the full csv file [here](./data/DiscriWinston.csv).
+=======
+Download the full csv file [here](https://learningintuition.github.io/data/DiscriWinston.csv).
+>>>>>>> 0342f60076ed6e9d864e40e3cf5f1f798a347125
 
 # Exploring the data
 
@@ -42,7 +48,11 @@ Both Summary and box plot reveals a visible difference between the subscriber an
 
 Mean of scaled income values are -0.3098 for Non subscribers and 0.6541 for subscribers. We will be using this in subsequent discussion.
 
+<<<<<<< HEAD
 ![alt text](./image/IncomeBySubscriber.png)
+=======
+![alt text](https://learningintuition.github.io/image/IncomeBySubscriber.png)
+>>>>>>> 0342f60076ed6e9d864e40e3cf5f1f798a347125
 
 ## Sumarizing Investment Amount by subscriber
 
@@ -55,23 +65,39 @@ Both the summary and box plot reveals a marked difference between the subscriber
 
 Mean of scaled investment amount values are -0.5528 for Non subscribers and 1.1670 for subscribers. We will be using this in subsequent discussion.
 
+<<<<<<< HEAD
 ![alt text](./image/InvestmentAmountBySubscriber.png)
+=======
+![alt text](https://learningintuition.github.io/image/InvestmentAmountBySubscriber.png)
+>>>>>>> 0342f60076ed6e9d864e40e3cf5f1f798a347125
 
 ### Comparing the density plot
 
 Density plots of income shows there is a significant overlap (28.15%) between the subscriber and non subscriber group. 
 
+<<<<<<< HEAD
 ![alt text](./image/IncomeBySubscriberDensity.png)
 
 Density plots of investment amount does not have a overlap (11.4%) as big as income. 
 
 ![alt text](./image/InestmentAmtBySubscriberDensity.png)
+=======
+![alt text](https://learningintuition.github.io/image/IncomeBySubscriberDensity.png)
+
+Density plots of investment amount does not have a overlap (11.4%) as big as income. 
+
+![alt text](https://learningintuition.github.io/image/InestmentAmtBySubscriberDensity.png)
+>>>>>>> 0342f60076ed6e9d864e40e3cf5f1f798a347125
 
 ## Goal of Discriminant Analsysis
 
 The following diagram shows a visual represntation of the two groups with respect to income and investment amount. The aim is to maximize the distance between the blue and the red dots.
 
+<<<<<<< HEAD
 ![alt text](./image/ScatterPlotIncomeInvestment.png)
+=======
+![alt text](https://learningintuition.github.io/image/ScatterPlotIncomeInvestment.png)
+>>>>>>> 0342f60076ed6e9d864e40e3cf5f1f798a347125
 
 Let us assume we modify the mean of income and investment by some arbitraty values a1 and a2 and arrive at a new set of income and investment values that gives maximum distance between the mean and a less overlapping area.
 
@@ -84,7 +110,11 @@ z2 = a1 * (mean income of non-subscribers) + a2 * (mean investment amount of non
 
 Without worring about how we find out the optimal a1 and a2, the below diagram shows zscore density plots for z1 and z2 for an optimal a1 and a2 which has lesser overlap (10.75%) compared to invesemnt amount and income. 
 
+<<<<<<< HEAD
 ![alt text](./image/ZScoreDensity.png)
+=======
+![alt text](https://learningintuition.github.io/image/ZScoreDensity.png)
+>>>>>>> 0342f60076ed6e9d864e40e3cf5f1f798a347125
 
 The following table shows the distance between the means. We can see that the mean distance for the zscore is 2.9904 which is significantly higger than the other two mean distance of 0.96 and 1.72 respectively.
 
