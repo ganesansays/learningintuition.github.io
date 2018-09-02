@@ -1,6 +1,6 @@
 set -e # Prevents script from running if there are any errors.
 git stash save # Stashes everything away incase you didn't commit them
-build exec jekyll build # Step 2, insert your build script here
+bundle exec jekyll build # Step 2, insert your build script here
 REV=`git rev-parse HEAD` # Gets commit hash as message
 git checkout master # Step 3
 git rm -rf . # Step 4
